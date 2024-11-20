@@ -12,7 +12,6 @@
                     <p><strong>Theme:</strong> Old Money</p>
                     <a @click.prevent="scrollToSection('rsvp')" class="btn">RSVP</a>
                     <a @click="openMap" class="btn right-btn"> Location</a>
-
                 </div>
             </div>
         </div>
@@ -29,8 +28,6 @@ export default {
                 '_blank'
             );
         },
-    },
-    methods: {
         scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
@@ -40,6 +37,7 @@ export default {
     },
 };
 </script>
+
 
 
 
@@ -139,6 +137,7 @@ export default {
         font-weight: bold;
         color: #ffffff;
         margin: 0 20px;
+        cursor: pointer;
         text-decoration: none;
         background: linear-gradient(45deg, #003366, #b30000, #000000);
         border-radius: 25px;
