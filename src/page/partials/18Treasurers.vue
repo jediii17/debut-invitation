@@ -1,28 +1,33 @@
 <template>
-    <section id="treasures" class="scroll-page scroll-section treasures">
+    <section id="treasures" class="scroll-page scroll-section candles">
         <div class="content-wrapper">
             <div class="text-content">
-                <h2>18th Treasures</h2>
+                <h2>18 Treasures</h2>
                 <div class="names-container">
                     <ul class="names-list">
-                        <li>Pam Enriquez</li>
-                        <li>Divine</li>
-                        <li>Shalom</li>
-                        <li>Melchelyn Limbaga-Batang</li>
-                        <li>Princess Malabonga</li>
-                        <li>Kearah Cueto</li>
-                        <li>Angelita Ratuin</li>
-                        <li>Steven Rongavilla</li>
-                        <li>Franzeska Amandy</li>
-                        <li>Lorenzo Barcenas</li>
-                        <li>Aaron Bugarin</li>
-                        <li>Christine Mojica</li>
-                        <li>Rhian Santillan</li>
-                        <li>Alleyah Arreza</li>
-                        <li>Artgie Estrada</li>
-                        <li>Kylie Celebre</li>
-                        <li>Jiro Calinao</li>
-                        <li>Walth Laguador</li>
+                        <li>1. Pam Enriquez</li>
+                        <li>6. Kearah Cueto</li>
+                        <li>11. Aaron Bugarin</li>
+                        <li>16. Kylie Celebre</li>
+
+                        <li>2. Divine</li>
+                        <li>7. Angelita Ratuin</li>
+                        <li>12. Christine Mojica</li>
+                        <li>17. Jiro Calinao</li>
+
+                        <li>3. Shalom</li>
+                        <li>8. Steven Rongavilla</li>
+                        <li>13. Rhian Santillan</li>
+                        <li>18. Walth Laguador</li>
+
+                        <li>4. Melchelyn Limbaga-Batang</li>
+                        <li>9. Franzeska Amandy</li>
+                        <li>14. Alleyah Arreza</li>
+
+                        <li></li>
+                        <li>5. Princess Malabonga</li>
+                        <li>10. Lorenzo Barcenas</li>
+                        <li>15. Artgie Estrada</li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +37,7 @@
 
 <script>
 export default {
-    name: 'Treasures',
+    name: 'Candles',
 };
 </script>
 
@@ -45,62 +50,63 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #f2f1e1;
+    color: #ffffff;
+}
 
-    .content-wrapper {
-        width: 90%;
-        max-width: 900px;
-        background-color: rgba(0, 0, 0, 0.7);
-        border: 1px solid #d4a76f;
-        border-radius: 20px;
-        padding: 20px;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        overflow: hidden;
+.content-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #d4a76f;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow: hidden;
+}
 
-        .text-content {
-            h2 {
-                font-family: 'Merriweather', serif;
-                font-size: 2.4rem;
-                color: #d4a76f;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                font-weight: bold;
-                margin-bottom: 20px;
-            }
+.text-content {
+    h2 {
+        font-family: 'Merriweather', serif;
+        font-size: 2.4rem;
+        color: #d4a76f;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-            .names-container {
-                max-height: 100vh;
+    .names-container {
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 10px;
 
-                .names-list {
-                    font-family: 'Merriweather', serif;
-                    font-size: 1.2rem;
-                    color: #e1e1e1;
-                    line-height: 1.6;
-                    list-style: none;
-                    padding: 10px;
-                    margin: 5px;
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr);
-                    gap: 10px;
-                }
-
-                li {
-                    position: relative;
-                    padding-left: 20px;
-                    text-align: center;
-                    border-radius: 10px;
-                    padding: 12px;
-                    color: #e1e1e1;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                }
-
-                li:hover {
-                    transform: scale(1.05);
-                    text-shadow: 0 0 20px rgba(212, 167, 111, 0.8);
-                }
-            }
+        .names-list {
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            color: #e1e1e1;
+            line-height: 1.6;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+            /* 4 columns layout */
+            gap: 20px;
         }
+
+        li {
+            text-align: left;
+            position: relative;
+            padding-left: 10px;
+            word-wrap: break-word;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(212, 167, 111, 0.8);
+        }
+
     }
 }
 </style>

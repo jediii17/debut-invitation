@@ -2,30 +2,31 @@
     <section id="blue-bills" class="scroll-page scroll-section blue-bills">
         <div class="content-wrapper">
             <div class="text-content">
-                <h2>18th Blue Bills</h2>
+                <h2>18 Blue Bills</h2>
                 <div class="names-container">
                     <ul class="names-list">
-                        <li>Aidz Batang</li>
-                        <li>Nerlisa Domingcil</li>
-                        <li>Caroline Cruz</li>
-                        <li>Cris Ratuin</li>
-                        <li>Sherwin Undayag</li>
+                        <li>1. Aidz Batang</li>
+                        <li>6. Leny</li>
+                        <li>11. Josie</li>
+                        <li>16. Timmy</li>
+                        <li> 2. Nerlisa Domingcil</li>
 
-                        <li>Leny</li>
-                        <li>Alma</li>
-                        <li>Waylla</li>
-                        <li>Rely</li>
-                        <li>Emily</li>
+                        <li>7. Alma 6. Leny</li>
+                        <li>12. Len 7. Alma</li>
+                        <li>17. Luisa</li>
+                        <li>3. Caroline Cruz</li>
+                        <li> 8. Waylla</li>
 
-                        <li>Josie</li>
-                        <li>Len</li>
-                        <li>Laura</li>
-                        <li>Edsel</li>
-                        <li>Herman</li>
+                        <li>13. Laura</li>
+                        <li>18. Pastor Diquito</li>
+                        <li>4. Cris Ratuin</li>
+                        <li>9. Rely</li>
+                        <li>14. Edsel</li>
 
-                        <li>Timmy</li>
-                        <li>Luisa</li>
-                        <li>Pastor Diquito</li>
+                        <li></li>
+                        <li>5. Sherwin Undayag</li>
+                        <li>10. Emily</li>
+                        <li>15. Herman</li>
                     </ul>
                 </div>
             </div>
@@ -52,8 +53,9 @@ export default {
 }
 
 .content-wrapper {
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1030px;
+    /* Adjust this for responsiveness */
     background-color: rgba(0, 0, 0, 0.7);
     border: 1px solid #d4a76f;
     border-radius: 20px;
@@ -76,20 +78,21 @@ export default {
 
     .names-container {
         max-height: 60vh;
+        /* Adjust if you want a smaller scrollable area */
         overflow-y: auto;
         padding-right: 10px;
 
         .names-list {
             font-family: 'Georgia', serif;
-            font-size: 1.2rem;
-            color: #e1e1e1;
+            font-size: 1rem;
+            color: #e2d2d2;
             line-height: 1.6;
             list-style: none;
             padding: 0;
             margin: 0;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            /* 5 items per row */
+            grid-template-columns: repeat(4, minmax(250px, 1fr));
+            /* 4 columns with adjustable width */
             gap: 20px;
         }
 
@@ -99,6 +102,12 @@ export default {
             padding-left: 10px;
             word-wrap: break-word;
         }
+
+        li:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(212, 167, 111, 0.8);
+        }
+
     }
 }
 </style>

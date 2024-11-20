@@ -47,6 +47,6 @@ export default {
 
 
 #app {
-    padding-top: 60px;
+    padding-top: 40px;
 }
 </style>

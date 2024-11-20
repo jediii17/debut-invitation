@@ -7,12 +7,12 @@
             <li><a @click.prevent="scrollToSection('debutant-info')">Debutant Info</a></li>
 
             <li class="dropdown">
-                <a>18th Celebrants</a>
+                <a>18 Celebrants</a>
                 <ul class="dropdown-menu">
-                    <li><a @click.prevent="scrollToSection('roses')">18th Roses</a></li>
-                    <li><a @click.prevent="scrollToSection('blue-bills')">18th Blue Bills</a></li>
-                    <li><a @click.prevent="scrollToSection('candles')">18th Candles</a></li>
-                    <li><a @click.prevent="scrollToSection('treasures')">18th Treasures</a></li>
+                    <li><a @click.prevent="scrollToSection('roses')">18 Roses</a></li>
+                    <li><a @click.prevent="scrollToSection('blue-bills')">18 Blue Bills</a></li>
+                    <li><a @click.prevent="scrollToSection('candles')">18 Candles</a></li>
+                    <li><a @click.prevent="scrollToSection('treasures')">18 Treasures</a></li>
                 </ul>
             </li>
             <li><a @click.prevent="scrollToSection('rsvp')">RSVP</a></li>

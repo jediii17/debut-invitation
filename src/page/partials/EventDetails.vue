@@ -2,13 +2,17 @@
     <section id="event-details" class="scroll-page event-details">
         <div class="content-container">
             <div class="text-content">
-                <h1>Nicolai @18</h1>
+                <span>Nicolai @18</span>
                 <div class="event-info">
-                    <p><strong>Venue:</strong> Sunlane Resort, Ilang-ilang St. Extension, Solemar Del Pansol Subd.,
-                        Brgy. Pansol, Calamba City, Laguna, Philippines</p>
-                    <p><strong>Date:</strong> December 13, 2024</p>
-                    <p><strong>Time:</strong> 6 PM onwards</p>
+                    <p class="date">FRI | 13 | DEC</p>
+                    <p class="msg">6 o'clock in the evening at Sunlane Resort</p>
+                    <p class="address" @click="openMap">
+                        Brgy. Pansol, Calamba City, Laguna
+                    </p>
                     <p><strong>Theme:</strong> Old Money</p>
+                    <a @click.prevent="scrollToSection('rsvp')" class="btn">RSVP</a>
+                    <a @click="openMap" class="btn right-btn"> Location</a>
+
                 </div>
             </div>
         </div>
@@ -18,13 +22,32 @@
 <script>
 export default {
     name: 'EventDetails',
+    methods: {
+        openMap() {
+            window.open(
+                'https://www.google.com.ph/maps/place/SunLane+Resort/@14.1810796,121.1838738,18z/data=!4m14!1m7!3m6!1s0x33bd618ebf32c30f:0x74dd7b3fb0448037!2sSunLane+Resort!8m2!3d14.1810796!4d121.1851613!16s%2Fg%2F11y5p2t5st!3m5!1s0x33bd618ebf32c30f:0x74dd7b3fb0448037!8m2!3d14.1810796!4d121.1851613!16s%2Fg%2F11y5p2t5st?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D',
+                '_blank'
+            );
+        },
+    },
+    methods: {
+        scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        },
+    },
 };
 </script>
 
+
+
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap');
+
 #event-details {
-    padding: 100px 20px;
-    background-image: url('@/assets/img/oldmoney.jpg');
+    background-image: url('@/assets/img/banner.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -38,6 +61,7 @@ export default {
     .content-container {
         max-width: 1200px;
         width: 100%;
+        margin-top: 25px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -50,28 +74,52 @@ export default {
             margin-left: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid #d4a76f;
 
-            h1 {
-                font-family: 'Baskerville', serif;
-                font-size: 4rem;
-                color: #d4a76f;
+            .date {
+                font-family: 'Georgia', serif;
+                font-size: 1.5rem;
+                text-align: center;
                 font-weight: bold;
-                margin-bottom: 30px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
             }
 
+            span {
+                font-family: "Pinyon Script", serif;
+                font-size: 8rem;
+                margin-bottom: 1px;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+                background: linear-gradient(90deg, #ff0000, #e8d0c8, #c6b5b2, #dcd4d1, #d65f34, #ff0000);
+                background-size: 400%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
+                animation: shiny 20s linear infinite;
+                padding: 0 12px;
+
+                @keyframes shiny {
+                    0% {
+                        background-position: 400% 0;
+                    }
+
+                    100% {
+                        background-position: -400% 0;
+                    }
+                }
+            }
+
+
             .event-info {
-                font-family: 'Georgia', serif;
+                font-family: 'Merriweather', serif;
                 font-size: 1.6rem;
                 line-height: 2;
                 color: #f4f1e1;
-                text-align: left;
+                text-align: center;
 
                 p {
                     margin-bottom: 15px;
+                    text-align: center
                 }
 
                 strong {
@@ -80,6 +128,25 @@ export default {
                     text-transform: uppercase;
                 }
             }
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 2px 35px;
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0 20px;
+        text-decoration: none;
+        background: linear-gradient(45deg, #003366, #b30000, #000000);
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px 5px rgba(212, 167, 111, 0.8);
         }
     }
 }
