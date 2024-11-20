@@ -38,9 +38,6 @@ export default {
 };
 </script>
 
-
-
-
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap');
 
@@ -93,7 +90,7 @@ export default {
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -moz-text-fill-color: transparent;
-                animation: shiny 20s linear infinite;
+                //animation: shiny 20s linear infinite;
                 padding: 0 12px;
 
                 @keyframes shiny {
@@ -107,7 +104,6 @@ export default {
                 }
             }
 
-
             .event-info {
                 font-family: 'Merriweather', serif;
                 font-size: 1.6rem;
@@ -117,7 +113,7 @@ export default {
 
                 p {
                     margin-bottom: 15px;
-                    text-align: center
+                    text-align: center;
                 }
 
                 strong {
@@ -147,6 +143,58 @@ export default {
             transform: scale(1.05);
             box-shadow: 0 0 15px 5px rgba(212, 167, 111, 0.8);
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #event-details {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+
+        .text-content {
+            width: 90%;
+            padding: 30px 20px;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+        .date {
+            font-size: 0;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+
+        .event-info {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 10px 30px;
+            margin: 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-container .text-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
 </style>

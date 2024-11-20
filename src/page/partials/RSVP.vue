@@ -2,7 +2,7 @@
     <section id="rsvp" class="scroll-page rsvp">
 
         <div>
-            <a href="https://forms.gle/LMzA357oYqg2wW357" target="_blank" class="btn">RSVP</a>
+            <a href="https://form.jotform.com/243243967182462" target="_blank" class="btn">RSVP</a>
         </div>
         <div class="content-wrapper">
             <p>

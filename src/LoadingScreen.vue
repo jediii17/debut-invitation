@@ -8,33 +8,36 @@ export default {
     data() {
         return {
             isLoading: true,
-            letters: [..."Nicolai @18"], // Split string into an array of letters
+            letters: [..."Nicolai @18"],
         };
     },
     mounted() {
-        // Simulate a loading process or replace with actual logic
         setTimeout(() => {
             this.isLoading = false;
-        }, this.letters.length * 200 + 1000); // Adjust to fade all letters plus a slight delay
+        }, this.letters.length * 200 + 1000);
     },
 };
 </script>
 
-
 <template>
-    <div id="loading-screen" v-if="isLoading">
-        <div class="text-container">
-            <span v-for="(letter, index) in letters" :key="index" class="letter"
-                :style="{ animationDelay: `${index * 0.2}s` }">
-                {{ letter }}
-            </span>
-        </div>
-    </div>
-    <div v-else>
-        <LandingPage />
+    <div id="app">
+        <!-- Loading Screen -->
+        <transition name="fade">
+            <div v-if="isLoading" id="loading-screen">
+                <div class="text-container">
+                    <span v-for="(letter, index) in letters" :key="index" class="letter"
+                        :style="{ animationDelay: `${index * 0.2}s` }">
+                        {{ letter }}
+                    </span>
+                </div>
+            </div>
+            <div v-else>
+                <LandingPage />
+            </div>
+        </transition>
+
     </div>
 </template>
-
 
 <style scoped>
 #loading-screen {
@@ -49,7 +52,6 @@ export default {
     left: 0;
     z-index: 9999;
     overflow: hidden;
-    transition: opacity 1s ease-in-out;
 }
 
 .text-container {
@@ -76,5 +78,26 @@ export default {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.page-transition-enter-active,
+.page-transition-leave-active {
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.page-transition-enter,
+.page-transition-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
 }
 </style>
