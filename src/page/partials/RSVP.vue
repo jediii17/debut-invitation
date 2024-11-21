@@ -22,9 +22,11 @@ export default {
 <style lang="scss" scoped>
 #rsvp {
     background-image: url('@/assets/img/dress_bg.png');
-    //background: linear-gradient(135deg, #003366, #b30000, #000000);
+    background-size: cover;
     background-position: center;
-    padding: 40px 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 40px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +35,7 @@ export default {
     .content-wrapper {
         width: 90%;
         max-width: 900px;
+        margin: 0 auto;
         background-color: rgba(0, 0, 0, 0.7);
         border: 1px solid #d4a76f;
         border-radius: 20px;
@@ -55,24 +58,57 @@ export default {
             font-size: 1rem;
         }
     }
-}
 
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    font-family: 'Merriweather', serif;
-    font-size: 18px;
-    color: #ddd9d9;
-    text-decoration: none;
-    background: linear-gradient(45deg, #003366, #b30000, #000000);
-    border-radius: 25px;
-    transition: all 0.3s ease-in-out;
-    margin-bottom: 10px;
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        color: #ddd9d9;
+        text-decoration: none;
+        background: linear-gradient(45deg, #003366, #b30000, #000000);
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 10px;
 
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px 5px rgba(212, 167, 111, 0.8);
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px 5px rgba(212, 167, 111, 0.8);
+        }
+    }
 
+    @media screen and (max-width: 768px) {
+        .content-wrapper {
+            width: 95%;
+            padding: 20px;
+            max-width: 700px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 12px 70px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .content-wrapper {
+            width: 90%;
+            padding: 15px;
+            max-width: 100%;
+        }
+
+        .btn {
+            font-size: 14px;
+            padding: 12px 70px;
+        }
+
+        .content-wrapper p {
+            font-size: 3vw;
+        }
+
+        .content-wrapper h2 {
+            font-size: 2rem;
+        }
     }
 }
 </style>

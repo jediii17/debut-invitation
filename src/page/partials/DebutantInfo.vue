@@ -1,17 +1,19 @@
 <template>
     <section id="debutant-info" class="scroll-page debutant-info">
         <div class="content-wrapper">
-            <h2>Debutant’s Information</h2>
-            <ul>
-                <li><strong>Height:</strong> 5’3</li>
-                <li><strong>Shoe Size:</strong> 6</li>
-                <li><strong>Clothing Size:</strong> Small to Medium</li>
-                <li><strong>Waist Size:</strong> 23 inches</li>
-                <li><strong>Hips Size:</strong> 25 inches</li>
-                <li><strong>Favorite Color:</strong> Blue</li>
-                <li><strong>Jewelry:</strong> Silver</li>
-                <li><strong>Makeup:</strong> Cool Tone</li>
-            </ul>
+            <div class="container">
+                <h2>Debutant’s Information</h2>
+                <ul>
+                    <li><strong>Height:</strong> 5’3</li>
+                    <li><strong>Shoe Size:</strong> 6</li>
+                    <li><strong>Clothing Size:</strong> Small to Medium</li>
+                    <li><strong>Waist Size:</strong> 23 inches</li>
+                    <li><strong>Hips Size:</strong> 25 inches</li>
+                    <li><strong>Favorite Color:</strong> Blue</li>
+                    <li><strong>Jewelry:</strong> Silver</li>
+                    <li><strong>Makeup:</strong> Cool Tone</li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
@@ -27,7 +29,7 @@ export default {
     background: linear-gradient(135deg, #003366, #b30000, #000000);
     background-attachment: fixed;
     background-position: center;
-    padding: 60px 0;
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +38,7 @@ export default {
     .content-wrapper {
         width: 90%;
         max-width: 800px;
+        margin: 0 auto;
         background-color: rgba(0, 0, 0, 0.7);
         border: 1px solid #d4a76f;
         border-radius: 20px;
@@ -68,7 +71,7 @@ export default {
                 padding-left: 10px;
                 background-color: #1a2d50;
                 border-radius: 10px;
-                padding: 12px;
+                padding: 10px;
                 color: #e1e1e1;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -85,6 +88,36 @@ export default {
                 font-weight: bold;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            padding: 20px;
+
+
+            ul {
+                grid-template-columns: 1fr;
+                font-size: 1rem;
+                gap: 15px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            padding: 15px;
+
+            ul {
+                grid-template-columns: 1fr;
+                font-size: 1rem;
+                gap: 10px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
     }
+
 }
 </style>

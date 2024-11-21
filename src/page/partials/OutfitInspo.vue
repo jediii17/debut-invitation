@@ -1,19 +1,21 @@
 <template>
     <section id="outfit-inspiration" class="scroll-page outfit-inspiration">
-        <div class="container">
-            <h2>Outfit Inspiration</h2>
-            <p>Men Outfit:</p>
-            <div class="images">
-                <img :src="outfitmen1" alt="Inspiration 1">
-                <img :src="outfitmen2" alt="Inspiration 2">
-                <img :src="outfitmen3" alt="Inspiration 3">
-            </div>
+        <div class="container-wrapper">
+            <div class="container">
+                <h2>Outfit Inspiration</h2>
+                <p>Men Outfit:</p>
+                <div class="images">
+                    <img :src="outfitmen1" alt="Inspiration 1">
+                    <img :src="outfitmen2" alt="Inspiration 2">
+                    <img :src="outfitmen3" alt="Inspiration 3">
+                </div>
 
-            <p>Women Outfit:</p>
-            <div class="images">
-                <img :src="outfitwomen" alt="Inspiration 1">
-                <img :src="outfitwomen1" alt="Inspiration 2">
-                <img :src="outfitwomen2" alt="Inspiration 3">
+                <p>Women Outfit:</p>
+                <div class="images">
+                    <img :src="outfitwomen" alt="Inspiration 1">
+                    <img :src="outfitwomen1" alt="Inspiration 2">
+                    <img :src="outfitwomen2" alt="Inspiration 3">
+                </div>
             </div>
         </div>
     </section>
@@ -55,20 +57,40 @@ export default {
     color: #f2f1e1;
 }
 
+.container-wrapper {
+    padding: 0;
+}
+
 .container {
     max-width: 999px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 50px;
+    padding: 30px;
     border: 2px solid #d4a76f;
     border-radius: 15px;
     position: relative;
     z-index: 1;
     width: 100%;
     animation: glowing 1.5s infinite alternate;
+
+    @media screen and (max-width: 768px) {
+        max-width: 90%;
+    }
+
+    @media screen and (max-width: 480px) {
+        max-width: 95%;
+    }
 }
 
-
+@media screen and (max-width: 768px) {
+    .container-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 10px;
+    }
+}
 
 h2 {
     font-family: 'Merriweather', serif;
@@ -103,7 +125,16 @@ img {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+    @media screen and (max-width: 768px) {
+        max-width: 300px;
+    }
+
+    @media screen and (max-width: 480px) {
+        max-width: 250px;
+    }
 }
+
 
 img:hover {
     transform: scale(1.05);

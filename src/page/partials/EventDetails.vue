@@ -6,10 +6,8 @@
                 <div class="event-info">
                     <p class="date">FRI | 13 | DEC</p>
                     <p class="msg">6 o'clock in the evening at Sunlane Resort</p>
-                    <p class="address" @click="openMap">
-                        Brgy. Pansol, Calamba City, Laguna
-                    </p>
-                    <p><strong>Theme:</strong> Old Money</p>
+                    <p class="msg">Brgy. Pansol, Calamba City, Laguna</p>
+                    <p class="msg"><strong>Theme:</strong> Old Money</p>
                     <div class="btn-group">
                         <a @click.prevent="scrollToSection('rsvp')" class="btn">RSVP</a>
                         <a @click="openMap" class="btn right-btn"> Location</a>
@@ -138,15 +136,31 @@ export default {
                 color: #f4f1e1;
                 text-align: center;
 
-                p {
-                    margin-bottom: 15px;
-                    text-align: center;
-                }
-
                 strong {
                     color: #d4a76f;
                     font-weight: bold;
                     text-transform: uppercase;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 4vw;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        font-size: 3.5vw;
+                    }
+                }
+
+                .msg {
+                    margin-bottom: 15px;
+                    text-align: center;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 4vw;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        font-size: 3.5vw;
+                    }
                 }
             }
         }

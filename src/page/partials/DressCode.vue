@@ -1,31 +1,34 @@
 <template>
     <section id="dress-code" class="scroll-page dress-code">
-        <div class="container">
-            <h2>Dress Code</h2>
-            <p class="banner"><strong>Colors to avoid:</strong> Red and Blue</p>
-            <p class="banner"><strong>Color Palette:</strong></p>
-            <div class="color-palette">
+        <div class="container-wrapper">
+            <div class="container">
+                <h2>Dress Code</h2>
+                <p class="banner"><strong>Colors to avoid:</strong> Red and Blue</p>
+                <p class="banner"><strong>Color Palette:</strong></p>
+                <div class="color-palette">
 
-                <div>
-                    <div class="color-circle" style="background-color: #grey;">
+                    <div>
+                        <div class="color-circle" style="background-color: #grey;">
+                        </div>
+                        <span class="color-name">Grey</span>
                     </div>
-                    <span class="color-name">Grey</span>
-                </div>
 
-                <div>
-                    <div class="color-circle" style="background-color: #000000;">
+                    <div>
+                        <div class="color-circle" style="background-color: #000000;">
+                        </div>
+                        <span class="color-name">Black</span>
                     </div>
-                    <span class="color-name">Black</span>
-                </div>
 
-                <div>
-                    <div class="color-circle" style="background-color: #ffffff;">
+                    <div>
+                        <div class="color-circle" style="background-color: #ffffff;">
+                        </div>
+                        <span class="color-name">White</span>
                     </div>
-                    <span class="color-name">White</span>
                 </div>
-
             </div>
         </div>
+
+
     </section>
 </template>
 
@@ -40,13 +43,22 @@ export default {
     padding: 30px 20px;
     text-align: center;
     background: linear-gradient(135deg, #003366, #b30000, #000000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
     background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #f2f1e1;
+}
+
+.container-wrapper {
+    padding: 0;
+    /* Default for desktop view */
 }
 
 .container {
@@ -60,6 +72,24 @@ export default {
     z-index: 1;
     width: 100%;
     animation: glowing 1.5s infinite alternate;
+
+    @media screen and (max-width: 768px) {
+        max-width: 90%;
+    }
+
+    @media screen and (max-width: 480px) {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 10px;
+    }
 }
 
 p {
