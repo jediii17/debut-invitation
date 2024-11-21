@@ -10,8 +10,11 @@
                         Brgy. Pansol, Calamba City, Laguna
                     </p>
                     <p><strong>Theme:</strong> Old Money</p>
-                    <a @click.prevent="scrollToSection('rsvp')" class="btn">RSVP</a>
-                    <a @click="openMap" class="btn right-btn"> Location</a>
+                    <div class="btn-group">
+                        <a @click.prevent="scrollToSection('rsvp')" class="btn">RSVP</a>
+                        <a @click="openMap" class="btn right-btn"> Location</a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -42,16 +45,14 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap');
 
 #event-details {
+    margin: 0;
+    padding: 0;
     background-image: url('@/assets/img/banner.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f4f1e1;
-    height: 100vh;
-    box-shadow: inset 0 0 300px rgba(0, 0, 0, 0.4);
+    background-position: center;
 
     .content-container {
         max-width: 1200px;
@@ -60,7 +61,7 @@ export default {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-right: 20px;
+        color: #f2f1e1;
 
         .text-content {
             background: rgba(0, 0, 0, 0.65);
@@ -76,6 +77,14 @@ export default {
                 font-size: 1.5rem;
                 text-align: center;
                 font-weight: bold;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 6vw;
+                }
+
+                @media screen and (max-width: 480px) {
+                    font-size: 5vw;
+                }
             }
 
             span {
@@ -92,6 +101,8 @@ export default {
                 -moz-text-fill-color: transparent;
                 animation: shiny 20s linear infinite;
                 padding: 0 12px;
+                display: inline-block;
+                text-align: center;
 
                 @keyframes shiny {
                     0% {
@@ -102,7 +113,23 @@ export default {
                         background-position: -400% 0;
                     }
                 }
+
+                @media screen and (max-width: 768px) {
+                    font-size: 15vw;
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                @media screen and (max-width: 480px) {
+                    font-size: 17vw;
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+
+                }
             }
+
 
             .event-info {
                 font-family: 'Merriweather', serif;
@@ -123,6 +150,24 @@ export default {
                 }
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .content-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+            }
+
+            .text-content {
+                width: 90%;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 30px 20px;
+                margin-top: 20px;
+            }
+        }
     }
 
     .btn {
@@ -131,8 +176,9 @@ export default {
         font-family: 'Merriweather', serif;
         font-size: 18px;
         font-weight: bold;
+        text-transform: uppercase;
         color: #ffffff;
-        margin: 0 20px;
+        margin: 0 30px;
         cursor: pointer;
         text-decoration: none;
         background: linear-gradient(45deg, #003366, #b30000, #000000);
@@ -143,58 +189,31 @@ export default {
             transform: scale(1.05);
             box-shadow: 0 0 15px 5px rgba(212, 167, 111, 0.8);
         }
-    }
-}
 
-@media screen and (max-width: 768px) {
-    #event-details {
-        height: auto;
-        padding: 20px 10px;
-    }
-
-    .content-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-right: 0;
-
-        .text-content {
-            width: 90%;
-            padding: 30px 20px;
-            margin-left: 0;
-            margin-top: 20px;
-        }
-
-        .date {
-            font-size: 0;
-        }
-
-        span {
-            font-size: 1rem;
-        }
-
-        .event-info {
-            font-size: 1.4rem;
-            line-height: 1.8;
-        }
-
-        .btn {
+        @media screen and (max-width: 768px) {
             font-size: 16px;
-            padding: 10px 30px;
-            margin: 10px 0;
+            margin: 0 10px;
+            padding: 12px 30px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 14px;
+            margin: 0 10px;
+            padding: 12px 30px;
         }
     }
-}
 
-@media screen and (max-width: 480px) {
-    .content-container .text-content {
-        width: 100%;
-        padding: 20px;
+    .btn-group {
+        display: inline-block;
+        gap: 10px;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
+
 }
 </style>
