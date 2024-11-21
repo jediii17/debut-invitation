@@ -90,7 +90,7 @@ export default {
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -moz-text-fill-color: transparent;
-                //animation: shiny 20s linear infinite;
+                animation: shiny 20s linear infinite;
                 padding: 0 12px;
 
                 @keyframes shiny {
