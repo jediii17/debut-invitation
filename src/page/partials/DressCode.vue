@@ -24,24 +24,6 @@
                     <span class="color-name">White</span>
                 </div>
 
-                <div>
-                    <div class="color-circle" style="background-color: #6b7768;">
-                    </div>
-                    <span class="color-name">Green</span>
-                </div>
-
-                <div>
-                    <div class="color-circle" style="background-color: #c1a98e;">
-                    </div>
-                    <span class="color-name">Beige</span>
-                </div>
-
-                <div>
-                    <div class="color-circle" style="background-color: #704e36;">
-                    </div>
-                    <span class="color-name">Coffee</span>
-                </div>
-
             </div>
         </div>
     </section>
