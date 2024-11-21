@@ -11,8 +11,8 @@
                         <li>16. Timmy</li>
                         <li> 2. Nerlisa Domingcil</li>
 
-                        <li>7. Alma 6. Leny</li>
-                        <li>12. Len 7. Alma</li>
+                        <li>7. Alma</li>
+                        <li>12. Len</li>
                         <li>17. Luisa</li>
                         <li>3. Caroline Cruz</li>
                         <li> 8. Waylla</li>
