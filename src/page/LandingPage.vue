@@ -5,7 +5,7 @@ import DressCode from './partials/DressCode.vue';
 import OutfitInspiration from './partials/OutfitInspo.vue';
 import Roses from './partials/18Roses.vue';
 import BlueBills from './partials/18BlueBills.vue';
-import Treasures from './partials/18Treasurers.vue';
+import Treasures from './partials/18Treasures.vue';
 import Candles from './partials/18Candles.vue';
 import DebutantInfo from './partials/DebutantInfo.vue';
 import RSVP from './partials/RSVP.vue';

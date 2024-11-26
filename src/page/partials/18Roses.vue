@@ -13,10 +13,10 @@
                         <li>6. Enrique Cruz</li>
                         <li>7. John Mark Batang</li>
                         <li>8. Ezekiel Domingcil</li>
-                        <li>9. Timothy Cruz</li>
-                        <li>10. Jedidia Cruz</li>
+                        <li>9. Jerom Jackson Jacinto</li>
+                        <li>10. Timothy Cruz</li>
                         <li>11. Cire Paul Cruz</li>
-                        <li>12. Earvin Enriquez</li>
+                        <li>12. Aldrin Hernandez Imperial</li>
                         <li>13. Bjorn Custodio</li>
                         <li>14. Khalil Dwight Ramirez</li>
                         <li>15. Thirdy Nabor</li>

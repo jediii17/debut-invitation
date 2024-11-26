@@ -12,9 +12,9 @@
 
                 <p>Women Outfit:</p>
                 <div class="images">
-                    <img :src="outfitwomen" alt="Inspiration 1">
+                    <img :src="outfitwomen5" alt="Inspiration 1">
                     <img :src="outfitwomen1" alt="Inspiration 2">
-                    <img :src="outfitwomen2" alt="Inspiration 3">
+                    <img :src="outfitwomen4" alt="Inspiration 3">
                 </div>
             </div>
         </div>
@@ -25,9 +25,10 @@
 import outfitmen1 from '@/assets/img/outfitmen1.jpg';
 import outfitmen2 from '@/assets/img/outfitmen2.jpg';
 import outfitmen3 from '@/assets/img/outfitmen3.jpg';
-import outfitwomen from '@/assets/img/outfitwomen.jpg';
 import outfitwomen1 from '@/assets/img/outfitwomen1.jpg';
 import outfitwomen2 from '@/assets/img/outfitwomen2.jpg';
+import outfitwomen4 from '@/assets/img/outfitwomen4.jpg';
+import outfitwomen5 from '@/assets/img/outfitwomen5.jpg';
 
 export default {
     name: 'OutfitInspiration',
@@ -36,9 +37,10 @@ export default {
             outfitmen1,
             outfitmen2,
             outfitmen3,
-            outfitwomen,
             outfitwomen1,
-            outfitwomen2
+            outfitwomen2,
+            outfitwomen4,
+            outfitwomen5
         };
     },
 };
@@ -113,28 +115,35 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 img {
-    max-width: 350px;
-    height: auto;
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
     border: 2px solid #d4a76f;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 
     @media screen and (max-width: 768px) {
-        max-width: 300px;
+        width: 250px;
+        height: 250px;
+    }
+
+    @media screen and (max-width: 680px) {
+        width: 200px;
+        height: 300px;
     }
 
     @media screen and (max-width: 480px) {
-        max-width: 250px;
+        width: 300px;
+        height: 500px;
     }
 }
-
 
 img:hover {
     transform: scale(1.05);
