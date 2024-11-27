@@ -7,7 +7,7 @@
         <div class="content-wrapper">
             <p>
                 Bring your enthusiasm and festive spirit! I hope you can make it to celebrate with me. Kindly RSVP on or
-                before December 5, 2024 to ensure your spot in my special day.
+                before December 11, 2024 to ensure your spot in my special day.
             </p>
         </div>
     </section>
