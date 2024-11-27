@@ -6,8 +6,8 @@
                 <div class="names-container">
                     <ul class="names-list">
                         <li>1. Pam Enriquez</li>
-                        <li>2. Divine</li>
-                        <li>3. Shalom</li>
+                        <li>2. Divine Madriaga</li>
+                        <li>3. Shalom Domingcil</li>
                         <li>4. Melchelyn Limbaga-Batang</li>
                         <li>5. Princess Malabonga</li>
                         <li>6. Kearah Cueto</li>

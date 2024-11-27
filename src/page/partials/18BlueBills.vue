@@ -5,26 +5,25 @@
                 <h2>18 Blue Bills</h2>
                 <div class="names-container">
                     <ul class="names-list">
-                        <li>1. Aidz Batang</li>
-                        <li>2. Nerlisa Domingcil</li>
-                        <li>3. Caroline Cruz</li>
-                        <li>4. Cris Ratuin</li>
-                        <li>5. Sherwin Undayag</li>
-                        <li>6. Leny</li>
-                        <li>7. Alma</li>
-                        <li>8. Waylla</li>
-                        <li>9. Rely</li>
-                        <li>10. Emily</li>
-                        <li>11. Josie</li>
-                        <li>12. Len</li>
-                        <li>13. Laura</li>
-                        <li>14. Edsel</li>
-                        <li>15. Herman</li>
-                        <li>16. Timmy</li>
-                        <li>17. Luisa</li>
-                        <li>18. Pastor Diquito</li>
+                        <li>1. Cris Ratuin </li>
+                        <li>2. Sherwin Undayag </li>
+                        <li>3. Leny Gregorio</li>
+                        <li>4. Racky Sokhal</li>
+                        <li>5. Alma Basong</li>
+                        <li>6. Yhlla Romero</li>
+                        <li>7. lorelei Bernando</li>
+                        <li>8. Emely Adayo</li>
+                        <li>9. Josie</li>
+                        <li>10. Lyn Bautista</li>
+                        <li>11. Laura Pineda</li>
+                        <li>12. Edsel Leoligao</li>
+                        <li>13. Herman Cruz</li>
+                        <li>14. Timmy Renoballes</li>
+                        <li>15. Luisa Mae Garces</li>
+                        <li>16. Aidz Batang</li>
+                        <li>17. Nerlisa Domingcil </li>
+                        <li>18. Caroline Cruz</li>
                     </ul>
-
                 </div>
             </div>
         </div>
